@@ -1,0 +1,88 @@
+/* ===========================================================================
+   BPM Combined Asset File
+   MANIFEST: chat () handlebars (1.0.0.beta.3) jquery (1.6.2) spade (1.0.2) sproutcore (2.0.beta.3.1) sproutcore-datastore (2.0.beta.3) sproutcore-datetime (2.0.beta.3) sproutcore-handlebars (2.0.beta.3) sproutcore-handlebars-format (2.0.beta.3.1) sproutcore-indexset (2.0.beta.3) sproutcore-metal (2.0.beta.3) sproutcore-runtime (2.0.beta.3) sproutcore-statechart (2.0.beta.4) sproutcore-utils (2.0.beta.3) sproutcore-views (2.0.beta.3)
+   This file is generated automatically by the bpm (http://www.bpmjs.org)
+   =========================================================================*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Lucida Grande";
+}
+#wrap {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+#side {
+  width: 250px;
+  -webkit-box-flex: 0;
+  background: #cfcfcf;
+}
+#roster .roster-item {
+  padding: 10px;
+}
+#roster .roster-item:nth-child(2n) {
+  background: #dfdfdf;
+}
+#main {
+  -webkit-box-flex: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  height: 100%;
+}
+#rooms {
+  -webkit-box-flex: 1; 
+}
+.room .topic {
+  box-sizing: border-box;
+  background: #dfdfdf;
+  padding: 10px;
+}
+.message {
+  display: -webkit-box;
+  border-bottom: 1px solid #dfdfdf;
+}
+.message .author, .message .payload, .message .created_at {
+  padding: 5px 10px;
+}
+.message .author {
+  width: 120px;
+  border-right: 1px solid #dfdfdf;
+}
+.message .payload {
+  -webkit-box-flex: 1;
+  border-right: 1px solid #dfdfdf;
+}
+.message .time {
+  width: 120px;
+}
+#new_message {
+  -webkit-box-flex: 0;
+  display: -webkit-box;
+  height: 50px;
+  background: #cfcfcf;
+}
+#new_message .text {
+  -webkit-box-flex: 1;
+  padding: 10px;
+}
+#new_message button {
+  background: #afafaf;
+  height: 30px;
+  margin: 10px 10px 10px 0;
+  border: 0;
+  border-radius: 6px;
+  padding: 3px 10px;
+}
+.message-field-view {
+  height: 30px;
+  box-shadow: inset 0 0 1px 1px #afafaf;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: #fefefe;
+  padding: 5px 10px;
+}
+.message-field-view .contact {
+  color: rgb(38,139,210);
+}

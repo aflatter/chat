@@ -1,0 +1,4 @@
+.bpm
+*.swp
+*.swo
+node_modules

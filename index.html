@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/bpm_styles.css" type="text/css" media="screen" charset="utf-8" />
+
+    <title>chat</title>
+  </head>
+  <body>
+    <script type="text/x-handlebars">
+    <div id="wrap">
+      <div id="main">
+        {{#collection id="rooms" itemClass="room" contentBinding="Chat.user*rooms"}}
+          <div class="topic">{{content.topic}}</div>
+          {{#collection id="messages" contentBinding="content.messages" itemClass="message" itemViewClass="Chat.MessageView"}}
+            <div class="author">{{content.author}}</div>
+            <div class="payload">
+              {{readablePayload}}
+            </div>
+            <div class="created_at">{{readableCreatedAt}}</div>
+            {{/collection}}
+        {{/collection}}
+        <div id="new_message">
+          <div class="text">
+            {{view Chat.MessageFieldView usersBinding="Chat.users"}}
+          </div>
+          <div class="button">
+            <button>Send</button>
+          </div>
+        </div>
+      </div>
+      <div id="side">
+        {{Chat.profile.name}}
+        {{#collection id="roster" itemClass="roster-item" contentBinding="Chat.room*users"}}
+          {{content.name}}
+        {{/collection}}
+      </div>
+    </div>
+  </script>
+    <script type="text/javascript" src="assets/bpm_libs.js"></script>
+    <script type="text/javascript">
+      spade.require('chat');
+      Chat.main();
+    </script>
+  </body>
+</html>
